@@ -1,0 +1,132 @@
+/*按钮普通态*/
+
+QPushButton
+{  
+    /* 前景色 */ 
+   /*字体颜色*/	
+    color:green;  
+ 
+    /* 背景色 */  
+    background-color:rgb(223,223,223);  
+ 
+   /* 边框*/
+	border: 2px solid rgb(14,150,254);
+ 
+    /* 边框风格 */  
+    border-style:outset;  
+ 
+    /* 边框宽度 */  
+    border-width:0.5px;  
+ 
+    /* 边框颜色 */  
+    border-color:rgb(10,45,110);  
+ 
+    /* 边框倒角、边框圆角半径 */
+    border-radius:10px;  
+	
+   /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+ 
+    /* 字体 */  
+    font:bold 14px;  
+	
+	 /*字体大小为20点*/
+    font-size:8pt;
+ 
+    /* 控件最小宽度 */  
+    min-width:100px;  
+ 
+    /* 控件最小高度 */  
+    min-height:20px;  
+ 
+    /* 内边距 */  
+    padding:4px;  
+} 
+ 
+ 
+/*按钮停留态*/
+QPushButton:hover {
+    background-color:white;
+    color: rgb(44 , 137 , 255);
+}
+
+/*按钮按下态*/
+QPushButton:pressed {
+    background-color:#ACEDFA;
+}
+
+QGroupBox {
+    border: 2px solid rgb(14 , 150 , 254);
+    border-radius: 5px;
+    /* 就像墙上挂着的两个相框,margin指的是相框与相框的距离
+       padding指的是每个相框里照片与相框边框的距离 */
+    margin-top: 0px;
+    font-family:Microsoft Yahei;
+    font:blod 14px;
+}
+
+QGroupBox::title{
+    /* 位置 */
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+
+    /* 内边框,上下和左右 */
+    padding: 0 3px;
+
+    font-family:Microsoft Yahei;
+    font:blod 20px;
+    font-size:12pt;
+}
+
+QLabel{
+    padding: 2px;
+    font-family:Microsoft Yahei;
+    color:black;
+    font:bold 16px;
+}
+
+/*修改下拉列表*/
+QComboBox {
+border: 1px solid rgb(0, 0, 0);
+border-radius: 3px;
+padding: 1px 18px 1px 3px;
+min-width: 6px;
+background-color: #5CACEE;
+
+}
+
+/****************************************************************************
+*			QTabWidget
+*		描述：pane 指整个tab组件
+*				   border-width 组件的外框宽度
+*				   border-color 外框颜色  border-style外框风格   （比如outset就是凸出立体感）
+*				   border-radius  外框的圆角像素
+****************************************************************************/
+
+QTabWidget::pane {
+        border: 1px solid rgb(14 , 150 , 254);/*无边框none;*/
+        border-top: 3px solid rgb(14 , 150 , 254);/*边款顶部：3px   实线   颜色(0,160,230)*/
+        background: transparent;/*背景透明transparent*/
+}
+QTabWidget::tab-bar {
+        border: 10px solid rgb(14 , 150 , 254);
+}
+QTabBar::tab {
+        border: none;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        color: rgb(0, 0, 0);
+        background: rgb(255, 255, 255, 30);
+        height: 28px;
+        min-width: 85px;
+        margin-right: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+}
+QTabBar::tab:hover {
+   background: rgb(0, 0, 255, 40);
+}
+QTabBar::tab:selected {
+        color: white;
+        background: rgb(0, 160, 230);
+}
